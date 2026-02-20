@@ -1,0 +1,571 @@
+:root {
+    --font1: 'TildaSans', sans-serif;
+    --font-Tilda: var(--font1);
+}
+
+
+body {
+    font-family: var(--font-Tilda);
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#anchor,
+#anchor_btn {
+    scroll-margin-top: 3em;
+}
+
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.SD_container {
+    max-width: 120em;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+
+.SD_screen {
+    margin-bottom: 5.688em;
+    display: flex;
+    align-items: center;
+    height: 100vh !important;
+    position: relative;
+    z-index: 1;
+}
+
+.SD__mask {
+    position: relative;
+}
+
+
+
+.SD__mask::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+}
+
+
+
+.SD_wrapp_img img {
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+
+.SD_inner__text {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    gap: 3em;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.SD_inner-effect {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.SD_inner__text--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.SD__svg-main {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5em;
+    height: auto;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(9px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.SD_title {
+    font-size: 3.625em;
+    width: min(50vw, 75%);
+    margin: 0 auto;
+    font-weight: 700;
+    line-height: 117%;
+}
+
+.SD_sub__title {
+    font-size: 1.375em;
+    font-weight: 700;
+    line-height: 34.1px;
+}
+
+.SD_btn {
+    padding: 1em 2em;
+    background-color: #1f5bff;
+    border-radius: 1.625em;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.SD_btn:hover {
+    background: #fff;
+}
+
+.SD_btn span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8em;
+    line-height: 140%;
+}
+
+.SD_btn:hover span {
+    color: #1f5bff;
+}
+
+.SD_btn a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8em;
+    line-height: 140%;
+}
+
+.SD_btn:hover a {
+    color: #1f5bff;
+}
+
+
+
+.SD_levels {
+    display: flex;
+}
+
+.SD_info-title {
+    font-size: 1.875em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5em;
+    line-height: 135%;
+}
+
+body .SD_sub {
+    font-size: 1.875em;
+    font-weight: 400;
+    display: block;
+    max-width: 29em;
+    margin-bottom: 2em;
+    line-height: 140%;
+}
+
+.SD_inner-svg {
+    display: flex;
+    gap: 0.5em;
+    align-items: self-end;
+    margin-bottom: 0.6em;
+    line-height: 155%;
+}
+
+
+.SD_svg {
+    font-size: 1.4em;
+}
+
+.SD_title-svg {
+    order: 2;
+    font-weight: 600;
+    font-size: 1.25em;
+}
+
+.SD_icon {
+    width: 1.25em;
+    height: 1.25em;
+    display: block;
+    color: #fff;
+}
+
+.SD__inner-text {
+    margin-bottom: 2em;
+    font-size: 1.25em;
+    line-height: 155%;
+}
+
+.SD_text {
+    margin-bottom: 0.4em;
+}
+
+
+.SD_list {
+    list-style-position: inside;
+}
+
+
+.SD_text {
+    max-width: 43em;
+    font-size: 1em;
+}
+
+.SD_bonuses {
+    background: #262525;
+}
+
+.SD_bag {
+    display: flex;
+    padding: 7em 0;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.SD_bag .SD_title {
+    font-size: 2.999999em;
+    width: min(50vw, 75%);
+    line-height: 120%;
+}
+
+.SD_made {
+    font-size: 0.75em;
+}
+
+
+.SD_tild {
+    font-size: 0.875em;
+}
+
+.inner__strela {
+    position: relative;
+    display: inline-flex;
+}
+
+.inner__strela svg {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: -5.2em;
+    margin-left: -4.2em;
+    width: 3em;
+    height: auto;
+}
+
+.SD__subt {
+    max-width: 30em;
+    margin: 0 auto;
+    font-size: 1.5em;
+    line-height: 150%;
+}
+
+.SD_bonuses {
+    margin-bottom: 0;
+}
+
+.SD_bonuses,
+footer {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.SD_bonuses.visible,
+footer.visible {
+    opacity: 1;
+}
+
+footer {
+    background: #000;
+    margin-top: -8em;
+    height: auto;
+    position: relative;
+}
+
+.SD__inner-footer {
+    padding: 2em 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0.5;
+}
+
+
+
+.SD__inner-footer img {
+    width: 2em;
+}
+
+.SD_svg-mobile {
+    display: none;
+}
+
+section:not(:first-of-type) {
+    margin: 0 0 7em;
+}
+
+
+@media (max-width:1200px) {
+    .SD_title {
+        font-size: 3.625em;
+        width: min(52vw, 100%);
+    }
+
+    .SD_sub__title {
+        font-size: 1.3em;
+        max-width: 43em;
+        line-height: 150%;
+    }
+
+    .SD_info-title {
+        max-width: 25em;
+        font-size: 1.875em;
+    }
+
+    body .SD_sub {
+        max-width: 26em;
+    }
+
+    .SD_text-info {
+        max-width: 39em;
+        font-size: 0.9em;
+
+    }
+
+    .SD_list li {
+        max-width: 40em;
+        font-size: 0.9em;
+    }
+
+    .SD_text {
+        max-width: 39em;
+        font-size: 0.9em;
+    }
+
+
+    .SD_icon {
+        width: 1em;
+        height: 1em;
+        display: block;
+    }
+
+    .SD_title-svg {
+        font-size: 1.125em;
+        font-weight: 600;
+    }
+
+    .SD__subt {
+        max-width: 31em;
+        font-size: 1.375em;
+    }
+
+    .SD__tiitle {
+        font-size: 2.6em;
+    }
+
+    .SD_inner-svg,
+    .SD__inner-text {
+        line-height: 155%;
+    }
+
+    .SD_bag .SD_title {
+        line-height: 112%;
+        width: min(60.9vw, 100%);
+    }
+}
+
+
+@media (max-width:768px) {
+
+    body {
+        font-size: 3vw;
+    }
+
+    .SD_container {
+        padding: 0 2em;
+    }
+
+    .SD_title {
+        font-size: 3.125em;
+        width: min(85vw, 100%);
+        line-height: 100%;
+    }
+
+    .SD_sub__title {
+        font-size: 1.45833em;
+        max-width: 22em;
+        line-height: 143%;
+    }
+
+    .SD__mask {
+        height: 851px;
+    }
+
+    .SD__svg-main {
+        width: 3em;
+    }
+
+    .SD_btn a {
+        font-size: 1.33333em;
+    }
+
+    .SD_info-title {
+        max-width: 18em;
+        font-size: 2.08333em;
+        font-weight: 600;
+        line-height: 123%;
+    }
+
+    body .SD_sub {
+        font-size: 2.08332em;
+        line-height: 120%;
+    }
+
+
+    .SD_bag .SD_title {
+        font-size: 3.125em;
+        line-height: 123%;
+        width: min(88vw, 110%);
+    }
+
+    .SD_icon {
+        width: 1.4em;
+        height: 1.4em;
+    }
+
+    .SD_title-svg {
+        font-size: 1.66666em;
+        font-weight: 600;
+        line-height: 23px;
+    }
+
+    .SD_inner-svg {
+        align-items: baseline;
+        line-height: 23.2px;
+    }
+
+    .SD_inner-svg,
+    .SD__inner-text {
+        line-height: 145%;
+    }
+
+    .SD_text {
+        max-width: 19em;
+        font-size: 1.33333em;
+    }
+
+    .SD_text-info {
+        font-size: 1.33333em;
+        max-width: 20em;
+    }
+
+    .SD_list li {
+        font-size: 1.33333em;
+        max-width: 21em;
+    }
+
+    .SD_max {
+        max-width: 20em;
+    }
+
+    .SD__subt {
+        max-width: 17em;
+        font-size: 2.083323em;
+        line-height: 140%;
+    }
+
+    .SD__inner-footer:nth-child(1) {
+        margin-top: 5.7em;
+        font-size: 1.4em;
+    }
+
+    .SD_svg-decstop {
+        display: none;
+    }
+
+    .SD_svg-mobile {
+        display: block;
+    }
+
+    .SD_inner__text {
+        gap: 2em;
+
+    }
+
+    .inner__strela {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+
+    .inner__strela svg {
+        position: static;
+        margin: 0 0 1em 0;
+        width: 2em;
+        height: auto;
+        transform: none;
+    }
+
+    .SD_bag {
+        padding: 5em 0;
+    }
+
+    .SD_svg {
+        font-size: 1.7em;
+    }
+
+    .SD_made {
+        font-size: 0.89286em;
+    }
+
+    .SD_tild {
+        font-size: 1.041649em;
+    }
+
+    .SD_btn span {
+        font-size: 1.33333em;
+    }
+}
